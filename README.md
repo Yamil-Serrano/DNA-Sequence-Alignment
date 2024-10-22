@@ -26,3 +26,13 @@ This tool can be applied in various fields of bioinformatics, including:
 
    ```bash
    git clone https://github.com/Yamil-Serrano/DNA-Sequence-Alignment.git
+   
+## License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](LICENSE.md).
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out to me:
+
+GitHub: [Neowizen](https://github.com/Yamil-Serrano)
