@@ -35,7 +35,7 @@ This project provides an efficient DNA sequence alignment tool utilizing dynamic
 
 ## Example CSV Format
 
-In the "Test_files" folder you will find an example of the .csv file that you can use.
+In the "resources/Test_files" folder you will find an example of the .csv file that you can use.
 
 ## License
 
