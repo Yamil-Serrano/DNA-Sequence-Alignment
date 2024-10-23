@@ -2,6 +2,8 @@ import csv
 
 gap_penalty = -2
 
+#-------------------------------------------------------Initializing the Scores matrix----------------------------------------------------------
+
 def score_matrix_generator(sec1, sec2):
     score_matrix = [[0 for _ in range(len(sec1) + 1)] for _ in range(len(sec2) + 1)]
     for i in range(1, len(sec2) + 1):
@@ -9,6 +11,8 @@ def score_matrix_generator(sec1, sec2):
     for j in range(1, len(sec1) + 1):
         score_matrix[0][j] = j * gap_penalty
     return score_matrix
+
+#-----------------------------------------------phase of populating the entire matrix with scores------------------------------------------------
 
 def scoring_phase(matrix, sec1, sec2):
     for i in range(1, len(matrix)):
@@ -25,6 +29,7 @@ def scoring_phase(matrix, sec1, sec2):
             matrix[i][j] = score
     return matrix
 
+#--------------------------------------------------------Backtracking for sequence alignment------------------------------------------------------
 def backtrack(matrix, sec1, sec2):
     i, j = len(sec2), len(sec1)
     aligned_sec1, aligned_sec2 = [], []
@@ -45,9 +50,7 @@ def backtrack(matrix, sec1, sec2):
             j -= 1
     return ''.join(reversed(aligned_sec1)), ''.join(reversed(aligned_sec2))
 
-def print_matrix(matrix):
-    for row in matrix:
-        print('\t'.join(map(str, row)))
+#-------------------------------------------------Reading the .csv file for processing--------------------------------------------------------------
 
 def align_sequences_from_csv(input_file):
     with open(input_file, newline='') as csvfile:
@@ -60,11 +63,9 @@ def align_sequences_from_csv(input_file):
             sec1, sec2 = row
             score_matrix = score_matrix_generator(sec1, sec2)
             filled_matrix = scoring_phase(score_matrix, sec1, sec2)
-            print(f"Scoring matrix for sequences {sec1} and {sec2}:")
-            print_matrix(filled_matrix)
             aligned_sec1, aligned_sec2 = backtrack(filled_matrix, sec1, sec2)
             score = filled_matrix[-1][-1]
-            results.append(f"{aligned_sec1} {aligned_sec2} {score}")
+            results.append(f"--------------------------\n{aligned_sec1} {aligned_sec2} {score}")
     return results
 
 output = align_sequences_from_csv('sequences.csv')
