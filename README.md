@@ -22,7 +22,7 @@ This project provides an efficient DNA sequence alignment tool utilizing dynamic
    pip install -r requirements.txt
 ## How It Works
 
-1. **Drag and Drop CSV**: To begin the alignment process, drag your `.csv` file into the input box labeled **"Insert your CSV here"**. The CSV file should contain the DNA sequences to be aligned.
+1. **Drag and Drop CSV**: To begin the alignment process, drag your `.csv` file into the input box labeled **"Insert your CSV here"**. The CSV file should contain the DNA sequences to be aligned. Note that the CSV file should not be dragged from the folder inside the repository, the CSV file should be located outside the repository, for example in Downloads or Documents.
   
 2. **Automatic Processing**: Once the CSV file is uploaded, the tool automatically processes the sequences, builds the score matrix, and computes the optimal alignment.
   
