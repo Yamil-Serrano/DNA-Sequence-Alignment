@@ -30,12 +30,7 @@ def backtrack(matrix, sec1, sec2):
     aligned_sec1, aligned_sec2 = [], []
     while i > 0 or j > 0:
         current_score = matrix[i][j]
-        if i > 0 and j > 0 and (current_score == matrix[i - 1][j - 1] + (1 if sec2[i - 1] == sec1[j - 1] else -1)):
-            aligned_sec1.append(sec1[j - 1])
-            aligned_sec2.append(sec2[i - 1])
-            i -= 1
-            j -= 1
-        elif j > 0 and current_score == matrix[i][j - 1] + gap_penalty:
+        if j > 0 and current_score == matrix[i][j - 1] + gap_penalty:
             aligned_sec1.append(sec1[j - 1])
             aligned_sec2.append('-')
             j -= 1
@@ -43,6 +38,11 @@ def backtrack(matrix, sec1, sec2):
             aligned_sec1.append('-')
             aligned_sec2.append(sec2[i - 1])
             i -= 1
+        elif i > 0 and j > 0:
+            aligned_sec1.append(sec1[j - 1])
+            aligned_sec2.append(sec2[i - 1])
+            i -= 1
+            j -= 1
     return ''.join(reversed(aligned_sec1)), ''.join(reversed(aligned_sec2))
 
 def print_matrix(matrix):
