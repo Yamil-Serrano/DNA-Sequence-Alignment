@@ -6,11 +6,11 @@ This project provides an efficient DNA sequence alignment tool utilizing dynamic
 
 ## Key Features
 
-- **Graphical User Interface (GUI)**: Simplifies interaction with the tool by allowing drag-and-drop functionality for CSV files.
+- **Graphical User Interface (GUI)**: Simplifies interaction with the tool by allowing users to select CSV files for processing.
 - **Score Matrix Construction**: Automatically creates a score matrix to compare the sequences based on user-defined scoring parameters.
 - **Dynamic Programming**: Utilizes dynamic programming to fill the score matrix, ensuring accurate and optimal alignments.
 - **Backtracking Algorithm**: Traces back through the score matrix to retrieve the best sequence alignment.
-- **Drag-and-Drop CSV Input**: Users can drag a `.csv` file into the designated area, and the app will process the sequences and display the alignment results.
+- **File Selection for Input**: Users can select a `.csv` file through a file dialog, and the app will process the sequences and display the alignment results.
 - **Customizable Scoring**: Allows the user to adjust match, mismatch, and gap penalties for flexible alignment criteria.
 
 ## Installation
@@ -22,7 +22,7 @@ This project provides an efficient DNA sequence alignment tool utilizing dynamic
    pip install -r requirements.txt
 ## How It Works
 
-1. **Drag and Drop CSV**: To begin the alignment process, drag your `.csv` file into the input box labeled **"Insert your CSV here"**. The CSV file should contain the DNA sequences to be aligned. Note that the CSV file should not be dragged from the folder inside the repository, the CSV file should be located outside the repository, for example in Downloads or Documents.
+1. **Select CSV File**: To begin the alignment process, click the button to select your .csv file. The CSV file should contain the DNA sequences to be aligned.
   
 2. **Automatic Processing**: Once the CSV file is uploaded, the tool automatically processes the sequences, builds the score matrix, and computes the optimal alignment.
   
@@ -32,10 +32,13 @@ This project provides an efficient DNA sequence alignment tool utilizing dynamic
 
 ![image](https://github.com/user-attachments/assets/73feb913-419f-4bc3-8805-aca24846bdb0)
 
+## Changes
+
+In the screenshot above, the application shows the drag-and-drop (DnD) functionality for file input. However, due to complications encountered while creating the executable, I have decided to change this functionality to a file selection method instead.
 
 ## Example CSV Format
 
-In the "resources/Test_files" folder you will find an example of the .csv file that you can use.
+In the "Test_files" folder you will find an example of the .csv file that you can use.
 
 ## License
 
