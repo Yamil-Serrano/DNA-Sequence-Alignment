@@ -41,8 +41,7 @@ In the screenshot above, the application shows the drag-and-drop (DnD) functiona
 In the "Test_files" folder you will find an example of the .csv file that you can use.
 
 ## License
-
-This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](LICENSE.md).
+This project is licensed under the MIT License – see the [LICENSE](LICENSE.md) file for details.
 
 ## Icon Attribution
 
